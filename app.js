@@ -62,7 +62,18 @@ function drawCircle (x, y, a, b) {
  {
      currentX = event.offsetX;
      currentY = event.offsetY;
-   
+   //task 3
+     if(isDrawing === true) {
+        if(currentTool === 'line') {
+            drawLine(startX, startY, currentX, currentY);
+        }
+        else if (currentTool === 'rectangle') {
+            drawRectangle(startX, startY, currentX, currentY);
+        }
+        else if (currentTool === 'circle') {
+            drawCircle(startX, startY, currentX, currentY)
+        }
+    }
  
      isDrawing = false;
  }
